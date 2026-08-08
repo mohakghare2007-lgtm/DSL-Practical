@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-    int roll[100], n, choice, pos, r;
+    int roll[100], n, choice, position, r;
     string name[100];
     float cgpa[100];
 
@@ -35,25 +35,25 @@ int main() {
 
         case 1:
             cout << "Enter position (1 to " << n + 1 << "): ";
-            cin >> pos;
+            cin >> position;
 
-            if (pos < 1 || pos > n + 1) {
+            if (position < 1 || position > n + 1) {
                 cout << "Invalid Position!" << endl;
                 break;
             }
 
-            for (int i = n; i >= pos; i--) {
+            for (int i = n; i >= position; i--) {
                 roll[i] = roll[i - 1];
                 name[i] = name[i - 1];
                 cgpa[i] = cgpa[i - 1];
             }
 
             cout << "Enter Roll No: ";
-            cin >> roll[pos - 1];
+            cin >> roll[position - 1];
             cout << "Enter Name: ";
-            cin >> name[pos - 1];
+            cin >> name[position - 1];
             cout << "Enter CGPA: ";
-            cin >> cgpa[pos - 1];
+            cin >> cgpa[position - 1];
 
             n++;
             cout << "Student Inserted Successfully!" << endl;
