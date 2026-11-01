@@ -57,6 +57,30 @@ class queue
                 cout<<"\t"<<q[i]<<"\t";
             }
     }
+
+    void showfront()
+    {
+        if(front==-1)
+        {
+            cout<<"Queue is empty.";
+        }
+        else
+        {
+            cout<<"\nFront :- "<<q[front];
+        }
+    }
+
+    void showrear()
+    {
+        if(front==-1)
+        {
+            cout<<"Queue is empty.";
+        }
+        else
+        {
+        cout<<"\nRear :- "<<q[rear];
+        }
+    }
 };
 
 int main()
@@ -68,6 +92,8 @@ int main()
     w.enqueue(38);
     w.dequeue();
     w.display();
+    w.showfront();
+    w.showrear();
 
     return 0;
 }
